@@ -152,6 +152,10 @@ public class tdMainClass {
 		int y_sector = (int)((y_coord) / y_sector_length);	
 		
 		
+		
+		
+		return 0; // Dan added this 
+		
 	}
 	
 		
