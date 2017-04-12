@@ -15,6 +15,20 @@ public class tdMainClass {
 	
 	public static int x_sector_length = (int)Math.sqrt(duko_x_dimensions);
 	public static int y_sector_length = (int)Math.sqrt(duko_y_dimensions);
+
+		//	[][][] [][][] [][][]
+		//	[][][] [][][] [][][]
+		//	[][][] [][][] [][][]
+		//                       _
+		//	[][][] [][][] [][][]  \
+		//	[][][] [][][] [][][]   >-- this is a sector length (equal to square root of grid side length)
+		//	[][][] [][][] [][][] _/
+		//
+		//	[][][] [][][] [][][]
+		//	[][][] [][][] [][][]
+		//	[][][] [][][] [][][]
+	
+	
 	
 	public static void main(String[] args) {
 		
@@ -95,21 +109,7 @@ public class tdMainClass {
 	public static int det_sector(int x_coord, int y_coord){
 		// var x_coord		-The x sudoko grid reference
 		// var y_coord		-The y sudoko grid reference
-		// var sector		-The subgrid a coordinate is assigned to
-		
-		
-		//	[][][] [][][] [][][]
-		//	[][][] [][][] [][][]
-		//	[][][] [][][] [][][]
-		//                       _
-		//	[][][] [][][] [][][]  \
-		//	[][][] [][][] [][][]   >-- this is a sector length (equal to square root of grid side length)
-		//	[][][] [][][] [][][] _/
-		//
-		//	[][][] [][][] [][][]
-		//	[][][] [][][] [][][]
-		//	[][][] [][][] [][][]
-		
+		// var sector		-The subgrid a coordinate is assigned to				
 		
 		//	Sector number assignment:
 		//
@@ -141,6 +141,20 @@ public class tdMainClass {
 		return sector;
 	}
 	
+	public static int det_sector_position(int x_coord, int y_coord){
+
+		// determine x sub-sector
+				
+		int x_sector = (int)((x_coord) / x_sector_length);		
+		
+		// determine y sub-sector
+		
+		int y_sector = (int)((y_coord) / y_sector_length);	
+		
+		
+	}
+	
+		
 	
 	
 	
